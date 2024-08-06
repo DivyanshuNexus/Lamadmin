@@ -8,6 +8,8 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import SuprSendInbox from '@suprsend/react-inbox'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -34,8 +36,15 @@ const Navbar = () => {
             <FullscreenExitOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
-            <div className="counter">1</div>
+              <div className="icon">
+                <SuprSendInbox
+                workspaceKey="PjIUGTYtYfZLxibT6DTQ"
+                subscriberId="AKBtjzoFKpvW_1eNicctP26h2icDXMF-6gntlbuPzPQ"
+               distinctId="nexus"
+              />
+          </div>
+            {/* <NotificationsNoneOutlinedIcon className="icon" />
+            <div className="counter">1</div> */}
           </div>
           <div className="item">
             <ChatBubbleOutlineOutlinedIcon className="icon" />
