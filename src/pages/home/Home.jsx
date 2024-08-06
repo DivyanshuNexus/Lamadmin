@@ -15,7 +15,7 @@ const Home = () => {
       subtext:'Admin',
     }
     await fetch(
-      "http://localhost:4000/send-notification",
+      "https://lamadmin-five.vercel.app/send-notification",
       {
         method: "POST",
         headers: {
